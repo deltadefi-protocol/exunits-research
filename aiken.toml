@@ -1,0 +1,14 @@
+name = "deltadefi-protocol/exunits-research"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'deltadefi-protocol/exunits-research'"
+
+[repository]
+user = "deltadefi-protocol"
+project = "exunits-research"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"
