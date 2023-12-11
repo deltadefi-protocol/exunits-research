@@ -1,6 +1,7 @@
 use aiken/transaction.{NoDatum, Output, OutputReference, TransactionId}
 use aiken/transaction/credential.{
-  Address, Credential, ScriptCredential, VerificationKeyCredential,
+  Address, Credential, Inline, ScriptCredential, StakeCredential,
+  VerificationKeyCredential,
 }
 use aiken/transaction/value.{PolicyId, from_lovelace}
 
@@ -122,4 +123,8 @@ pub fn mock_script_address_3(stake_credential) -> Address {
     payment_credential: ScriptCredential(mock_script_hex_3()),
     stake_credential,
   }
+}
+
+pub fn mock_stake_cred(cred_hex: ByteArray) -> StakeCredential {
+  Inline(VerificationKeyCredential(cred_hex))
 }
